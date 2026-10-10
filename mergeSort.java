@@ -32,7 +32,7 @@ public class mergeSort {
         }
     }
 
-    private static void mergeSort(int[] a){
+    private static void mergesort(int[] a){
         if (a.length < 2){
             return;
         }
@@ -41,8 +41,8 @@ public class mergeSort {
         int[] b = Arrays.copyOfRange(a, 0, mid);
         int[] c = Arrays.copyOfRange(a, mid, a.length);
 
-        mergeSort(b);
-        mergeSort(c);
+        mergesort(b);
+        mergesort(c);
 
         merge(a, b, c);
     }
